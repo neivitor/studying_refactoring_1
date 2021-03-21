@@ -1,6 +1,7 @@
 # studying_refactoring_1
 Exemplos extraídos do Livro Refatoração do Martin Fowler
 ## Fowler, Martin. Refatoração. Novatec Editora. Edição do Kindle.
+
 Refatoração Feitas:
 1- Extrair o bloco do Switch para uma função (Extract Function - Pg. 28),
 2- Altera o nome da variável de retorno, thisAmount, para result. (dar mais clareza à função extraída. - Pg 28)
@@ -9,3 +10,5 @@ Refatoração Feitas:
 5 - Removendo variavel play, Internalizar variável - (Inline Variable - P. 31)
 6 - Mudar declaração de função (Change Function Declaration p. 31) em amountFor para remover o parâmetro play.
 7 - Aplica o Internalizar Variável (Inline Variable) no amountFor;
+8 - Removendo variável Format por uma função declarada.
+9 - Aplicar o Mudar declaração de função (Change Function Declaration - p. 38) na função format.
