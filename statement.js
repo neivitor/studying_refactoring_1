@@ -14,6 +14,10 @@ const plays = {
   "othello": {"name": "Othello", "type": "tragedy"}
 }
 
+function playFor(aPerformance){
+  return plays[aPerformance.playID];
+}
+
 function forAmount(aPerformance, play){
   let result = 0;
 
@@ -47,7 +51,7 @@ function statement (invoice, plays) {
     minimumFractionDigits: 2 }).format;
 
   for (let perf of invoice.performances) {
-    const play = plays[perf.playID];
+    const play = playFor(perf);
     let thisAmount = forAmount(perf, play)
     // soma créditos por volume
     volumeCredits += Math.max(perf.audience - 30, 0);
