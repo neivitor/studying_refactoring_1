@@ -6,3 +6,4 @@ Refatoração Feitas:
 2- Altera o nome da variável de retorno, thisAmount, para result. (dar mais clareza à função extraída. - Pg 28)
 3 - Altera o nome da variável passado por parametro na função forAmount, de perf para aPerformance. (Incluir no parametro o nome do tipo - Pg 29)
 4 - Retirar a variável play de forAmount (Substituir variável temporária por consulta (Replace Temp with Query - P. 30 ).
+5 - Removendo variavel play, Internalizar variável - (Inline Variable - P. 31)
