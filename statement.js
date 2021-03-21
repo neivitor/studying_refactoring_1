@@ -51,7 +51,7 @@ function statement (invoice) {
     minimumFractionDigits: 2 }).format;
 
   for (let perf of invoice.performances) {
-    let thisAmount = amountFor(perf, playFor(perf))
+    let thisAmount = amountFor(perf)
     // soma créditos por volume
     volumeCredits += Math.max(perf.audience - 30, 0);
     // soma um crédito extra para cada dez espectadores de comédia
