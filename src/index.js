@@ -85,8 +85,13 @@ function renderPlainText(data, plays){
 function statement(invoice, plays) {
  const statementData={};
  statementData.customer=invoice.customer;
- statementData.performances = invoice.performances;
+ statementData.performances = invoice.performances.map(enRickPerformance);
  return renderPlainText(statementData, plays)
+
+ function enRickPerformance(aPerformance){
+   const result = Object.assign({}, aPerformance);
+   return result
+ }
 }
 
 const report = (Invoices, Plays)=> Invoices.map(invoice=>{
