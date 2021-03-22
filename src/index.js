@@ -55,19 +55,26 @@ function usd(aNumber){
     minimumFractionDigits: 2 }).format(aNumber/100);
 }
 
+function totalVolumeCredits(invoice){
+  let volumeCredits = 0;
+  for (let perf of invoice.performances) {
+    volumeCredits+= volumeCreditsFor(perf);
+  }
+  return volumeCredits
+}
+
 
 function statement (invoice) {
   let totalAmount = 0;
-  let volumeCredits = 0;
   let result = `Statement for ${invoice.customer}\n`;
-
   for (let perf of invoice.performances) {
-    volumeCredits += volumeCreditsFor(perf)
+    //exibe a linha para esta requisições
     result += ` ${playFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
     totalAmount += amountFor(perf);
   }
   result += `Amount owed is ${usd(totalAmount)}\n`;
-  result += `You earned ${volumeCredits} credits\n`; return result;
+  result += `You earned ${totalVolumeCredits(invoice)} credits\n`;
+  return result;
 }
 
 const result = (Invoices, Plays)=> Invoices.map(invoice=>{

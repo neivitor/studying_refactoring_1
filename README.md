@@ -12,3 +12,7 @@ Refatoração Feitas:
 7 - Aplica o Internalizar Variável (Inline Variable) no amountFor;
 8 - Removendo variável Format por uma função declarada.
 9 - Aplicar o Mudar declaração de função (Change Function Declaration - p. 38) na função format.
+10 - Dividir o Laço (Split Loop) - para separar a acumulução do volumeCredits
+11 - Deslocar instruções (Slide Statements p.39) - para mover a declaração da variável para perto do laço.
+12 - Extrair função (Extract Function) - ao cálculo geral da variável
+13 - Internalizar Variável (Inline Variable)
