@@ -56,20 +56,19 @@ function usd(aNumber){
 }
 
 function totalVolumeCredits(invoice){
-  let volumeCredits = 0;
+  let result = 0;
   for (let perf of invoice.performances) {
-    volumeCredits+= volumeCreditsFor(perf);
+    result+= volumeCreditsFor(perf);
   }
-  return volumeCredits
+  return result
 }
 
-function apleSauce(invoice){
-  let totalAmount = 0;
+function totalAmount(invoice){
+  let result = 0;
   for (let perf of invoice.performances) {
-    totalAmount += amountFor(perf);
+    result += amountFor(perf);
   }
-
-  return totalAmount;
+  return result;
 }
 
 
@@ -79,8 +78,7 @@ function statement (invoice) {
     //exibe a linha para esta requisições
     result += ` ${playFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
   }
-  let totalAmount = apleSauce(invoice);
-  result += `Amount owed is ${usd(totalAmount)}\n`;
+  result += `Amount owed is ${usd(totalAmount(invoice))}\n`;
   result += `You earned ${totalVolumeCredits(invoice)} credits\n`;
   return result;
 }
