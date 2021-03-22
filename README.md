@@ -2,7 +2,7 @@
 Exemplos extraídos do Livro Refatoração do Martin Fowler
 ## Fowler, Martin. Refatoração. Novatec Editora. Edição do Kindle.
 
-Refatoração Feitas:
+## Refatoração Estruturais Feitas :
 1- Extrair o bloco do Switch para uma função (Extract Function - Pg. 28),
 2- Altera o nome da variável de retorno, thisAmount, para result. (dar mais clareza à função extraída. - Pg 28)
 3 - Altera o nome da variável passado por parametro na função forAmount, de perf para aPerformance. (Incluir no parametro o nome do tipo - Pg 29)
@@ -16,3 +16,6 @@ Refatoração Feitas:
 11 - Deslocar instruções (Slide Statements p.39) - para mover a declaração da variável para perto do laço.
 12 - Extrair função (Extract Function) - ao cálculo geral da variável
 13 - Internalizar Variável (Inline Variable)
+
+## Refatoração Lógicas Feitas :
+1 - Separa em fases (Split Phase) - Dividir a parte do Cálculo da Renderização aplicando o Extrair Funções.

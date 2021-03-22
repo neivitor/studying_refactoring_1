@@ -1,4 +1,4 @@
-const statement = require('./index');
+const report = require('./index');
 
 const mock_invoices = [
   { "customer": "BigCo",
@@ -27,7 +27,7 @@ const result_mock = [
 
 
 test('get statements values',()=>{
-  const resultStatements = statement(mock_invoices, mock_plays)
+  const resultStatements = report(mock_invoices, mock_plays)
   expect(resultStatements).toEqual(result_mock);
 })
 
