@@ -70,32 +70,12 @@ function statement (invoice) {
   result += `You earned ${volumeCredits} credits\n`; return result;
 }
 
-function test(){
-  const resultExpected = [
-    'Statement for BigCo\n' +
-      ' Hamlet: $650.00 (55 seats)\n' +
-      ' As You Like It: $580.00 (35 seats)\n' +
-      ' Othello: $500.00 (40 seats)\n' +
-      'Amount owed is $1,730.00\n' +
-      'You earned 47 credits\n'
-  ]
-
-  const result = invoices.map(invoice=>{
-    return statement(invoice, plays)
+const result = (Invoices, Plays)=> Invoices.map(invoice=>{
+    return statement(invoice, Plays)
   })
 
-  const toEqualExpected = result.toString() === resultExpected.toString();
+console.log(result(invoices, plays))
 
-  const resultTest = toEqualExpected ? "test Success" : "test Failed";
-
-  return {
-    resultTest, resultExpected, result
-  }
-}
-
-const tests_mock = test()
-
-console.log(tests_mock)
-
+module.exports = result;
 
 
